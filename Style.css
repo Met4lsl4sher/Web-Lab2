@@ -1,0 +1,79 @@
+/*c1, c2, c3, c4, c5, c6 - Дизайн блоків*/
+.c1{
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  background:LightSkyBlue;
+  grid-area: cLeft; 
+  min-height: 400px;
+  padding-top: 60px;
+  padding-left: 20px;
+}
+
+.c2{
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  background:LightSalmon;
+  grid-area: cTop;
+  min-height: 250px;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.c3{
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  background:PaleTurquoise;
+  grid-area: cBottom;
+  min-height: 150px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.c4{
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  background:LightPink;
+  grid-area: cRightTop;
+  min-height: 150px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.c5{
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  background:PaleGreen;
+  grid-area: cRightBottom;
+  min-height: 250px;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.c6{
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  background:#fc4bf1;
+  grid-area: footer;
+  min-height: 100px;
+  text-align: center;
+}
+/*В container задана структура, розмір, кількість для стовпців та рядків*/
+.container{
+    background: LightGray;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 5px auto 5px auto;
+    grid-template-columns: repeat(3, auto);
+    -ms-grid-rows: auto 5px auto 5px auto 5px auto;
+    grid-template-rows: repeat(4,auto); 
+    grid-gap: 5px;  
+                    grid-template-areas:"cLeft cTop cRightTop"
+                                "cLeft cTop cRightBottom"
+                                "cLeft cBottom cRightBottom"
+                                "footer footer footer";
+
+}
